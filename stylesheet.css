@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: 0.5s;
+}
+
+.sci {
+    position: relative;
+    display: flex;
+}
+
+.sci li {
+    list-style: none;
+}
+.sci li::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,calc(-50% + 150px));
+    font-size: 14vh;
+    pointer-events: none;
+    font-weight: 700;
+    transition: 0.5s;
+    opacity: 0;
+}
+.sci li:hover::before {
+    opacity: 0.1;
+    transform: translate(-50%,calc(-50% + 150px));
+}
+
+.sci li a {
+    position: relative;
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    border-radius: 10px;
+    text-decoration: none;
+    margin: 20px;
+    font-size: 4em;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    box-shadow: 0 25px 35px rgba(0, 0, 0, 1);
+    transition: background 0.25s;
+}
+.js-tilt-glare {
+    border-radius: 10px;
+}
+.sci li a:hover.facebook {
+    background-color: #1877f2;
+}
+.sci li a:hover.youtube {
+    background-color: #ff0000;
+}
+.sci li a:hover.linkedin {
+    background-color: #0178b2;
+}
+.sci li a:hover.twitter {
+    background-color: #0099ff;
+}
+.sci li a:hover.insta {
+    background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+}
+.sci li a .fa {
+    transition: 0.25s;
+    pointer-events: none;
+}
+.sci li a:hover .fa {
+    color: #fff;
+    transform: scale(1.75) translateZ(40px);
+}
